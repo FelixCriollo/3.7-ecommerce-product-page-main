@@ -4,5 +4,10 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Kumbh Sans', sans-serif
+  font-family: 'Kumbh Sans', sans-serif;
+  background: #fff;
+  font-size: 16px;
+}
+button {
+  all: unset;
 }
