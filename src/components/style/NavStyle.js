@@ -3,6 +3,10 @@ import { styleVariables } from "./styleVariables"
 
 export const NavStyle = styled.nav`
   height: 24px;
+
+  .nav-disabled {
+    display: none;
+  }
 ` 
 
 export const NavButton = styled.button`
