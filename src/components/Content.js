@@ -1,11 +1,11 @@
 import { ContentStyle } from "./style/ContentStyle"
-import Carousel from "./Carousel"
 import Description from "./Description"
+import Product from "./Product"
 
 export default function Content() {
   return (
     <ContentStyle>
-      <Carousel />
+      <Product />
 
       <Description />
     </ContentStyle>

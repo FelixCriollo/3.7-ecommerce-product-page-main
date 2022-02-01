@@ -7,7 +7,7 @@ export default function Nav() {
     <NavStyle>
       <NavButton title="open menu" background={menu} />
 
-      <div className="nav-disabled">
+      <div className="nav-container">
         <NavButton title="close menu" background={close} />
         
         <NavList>

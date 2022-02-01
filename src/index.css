@@ -11,3 +11,6 @@ body {
 button {
   all: unset;
 }
+img {
+  width: 100%;
+}

@@ -4,7 +4,7 @@ import { styleVariables } from "./styleVariables"
 export const NavStyle = styled.nav`
   height: 24px;
 
-  .nav-disabled {
+  .nav-container {
     display: none;
   }
 ` 
