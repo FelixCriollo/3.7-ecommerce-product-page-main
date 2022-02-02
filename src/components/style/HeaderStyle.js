@@ -17,7 +17,7 @@ export const HeaderStyle = styled.header`
     order: 1;
     width: 24px;
     height: 24px;
-    margin-left: 22px;
+    margin-left: 6.5%;
     border-radius: 50%;
   }
 ` 
@@ -26,6 +26,6 @@ export const CartBuy = styled.button`
   order: 1;
   width: 24px;
   height: 24px;
-  background: url(${props => props.background}) center center no-repeat, red;
+  background: url(${props => props.background}) center center no-repeat;
   margin-left: auto;
 `

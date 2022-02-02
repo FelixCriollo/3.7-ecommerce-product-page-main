@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { styleVariables } from "./styleVariables";
 
-export const UnitsStyle = styled.div`
+export const UnitsStyle = styled.form`
 
   .units {
+    position: relative;
     width: 100%;
     height: 56px;
     background: ${styleVariables["bg-input"]};
@@ -12,9 +13,15 @@ export const UnitsStyle = styled.div`
     display: flex;
     justify-content: center;
     
-    &__value {
+    &__input {
+      text-align: center;
+      border: none;
+      outline: none;
+      background: transparent;
+      border-radius: 30px;
+      width: 100%;
       font-weight: 700;
-      margin: auto;
+      font-size: 1rem;
     }
     
     &__add {
@@ -38,4 +45,11 @@ export const UnitsStyle = styled.div`
     }
   }
 `
+export const UnitsBtn = styled.button`
+  position: absolute;
+  background: url(${props => props.background}) no-repeat center;
+  width: 60px;
+  height: 100%;
+  ${props => props.position !== "left" ? "left: 0;" : "right: 0;"}
 
+`
