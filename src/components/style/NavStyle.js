@@ -42,6 +42,26 @@ export const NavStyle = styled.nav`
       transition: all 1s ease-in-out;
     }
   }
+
+  @media (min-width: 1024px) {
+    height: auto;
+    order: 1;
+
+    .nav-container {
+      position: relative;
+      display: block;
+      height: auto;
+      width: 398px;
+      z-index: 10;
+      padding: 0;
+      margin-left: 3.6em;
+      transform: unset;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
 ` 
 
 export const NavButton = styled.button`
@@ -49,6 +69,10 @@ export const NavButton = styled.button`
   height: 24px;
   background: url(${props => props.background}) center left no-repeat;
   z-index: 10;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
 `
 export const NavList = styled.ul`
   display: block;
@@ -63,5 +87,39 @@ export const NavList = styled.ul`
     font-weight: 700;
     font-size: 1.1rem;
     padding: .7em 0;
+  }
+
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    
+    a {
+      position: relative;
+      font-size: 1rem;
+      color: ${styleVariables["text-para"]};
+      padding: 0;
+      cursor: pointer;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background: ${styleVariables["primary"]};
+        border-radius: 50px;
+        top: 61px;
+        display: none;
+      }
+
+      &:hover,
+      &:focus {
+        color: ${styleVariables["text-hea"]};
+
+        &:before {
+          display: block;
+        }
+      }
+    }
   }
 `

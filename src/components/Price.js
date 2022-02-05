@@ -1,9 +1,11 @@
 import { PriceStyle } from "./style/PriceStyle";
 import Units from "./Units";
-import useCart from "../hooks/useCart";
 
 export default function Price() {
-  const { price, discount } = useCart();
+  const price = {
+    amount: 125.00,
+    discount: 50
+  }
 
   return (
     <PriceStyle discount={price.discount} amount={price.amount}>

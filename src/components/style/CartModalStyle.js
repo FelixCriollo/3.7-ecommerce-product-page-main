@@ -4,7 +4,7 @@ import { styleVariables } from "./styleVariables";
 export const CartModalStyle = styled.div`
   position: absolute;
   display: ${
-    props => props.mState ? "block" : "none"
+    props => props.mState ? "none" : "block"
   };
   width: calc(100% - 16px);
   background: ${styleVariables.bg};

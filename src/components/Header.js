@@ -8,7 +8,7 @@ import cart from "../images/icon-cart.svg";
 
 
 export default function Header() {
-  const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState(true);
 
   const showModal = () => setModal(!modal)
 
