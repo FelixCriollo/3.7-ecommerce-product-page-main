@@ -43,6 +43,9 @@ export const UnitsStyle = styled.form`
         margin-right: 14px;
       }
     }
+    &__amount {
+      display: none;
+    }
   }
 `
 export const UnitsBtn = styled.button`
@@ -50,6 +53,6 @@ export const UnitsBtn = styled.button`
   background: url(${props => props.background}) no-repeat center;
   width: 60px;
   height: 100%;
-  ${props => props.position !== "left" ? "left: 0;" : "right: 0;"}
+  ${props => props.position === "left" ? "left: 0;" : "right: 0;"}
 
 `

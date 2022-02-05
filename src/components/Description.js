@@ -1,16 +1,18 @@
 import { DescriptionStyle } from "./style/DescriptionStyle"
 import Price from "./Price"
-import data from "../services/data.js"
+import useCart from "../hooks/useCart"
 
 
 export default function Description() {
+  const {descrip, name, brand} = useCart();
+
   return (
     <DescriptionStyle>
-      <h3 className="descrip__brsnd">{data.brand}</h3>
+      <h3 className="descrip__brsnd">{brand}</h3>
 
-      <h2 className="descrip__name">{data.name}</h2>
+      <h2 className="descrip__name">{name}</h2>
 
-      <p className="descrip__body">{data.descrip}</p>
+      <p className="descrip__body">{descrip}</p>
       
       <Price />
     </DescriptionStyle>

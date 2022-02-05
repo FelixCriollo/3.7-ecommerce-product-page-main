@@ -3,20 +3,43 @@ import previous from "../images/icon-previous.svg";
 import next from "../images/icon-next.svg";
 
 export default function Product() {
+
+  const btnActive = (e) => {
+    const $container = document.querySelector(".main-image-container");
+
+    e.target.classList.contains("left") 
+      ? $container.scrollTop -= $container.offsetHeight
+      : $container.scrollTop += $container.offsetHeight
+  }
+
   return (
     <ProductStyle>
       <div className="main-image"> 
-        <MoveBtn background={next} position={"left"} type="button"/>
+        <MoveBtn 
+          background={previous} 
+          position={"left"} 
+          type="button" 
+          className="left"
+          onClick={e => btnActive(e)}
+        />
 
         <div className="main-image-container">
-          {/* Hacer un componente con las imagenes */}
           <img className="main-image__img" src={require("../images/image-product-1.jpg")} alt=""/>
+          <img className="main-image__img" src={require("../images/image-product-2.jpg")} alt=""/>
+          <img className="main-image__img" src={require("../images/image-product-3.jpg")} alt=""/>
+          <img className="main-image__img" src={require("../images/image-product-4.jpg")} alt=""/>
         </div>
 
-        <MoveBtn background={previous} position={"right"} type="button"/>
+        <MoveBtn 
+          background={next} 
+          position={"right"} 
+          type="button" 
+          className="right"
+          onClick={e => btnActive(e)}
+        />
       </div>
 
-      <div className="thumbnail">
+      <div className="thumbnail"> 
 
       </div>
     </ProductStyle>

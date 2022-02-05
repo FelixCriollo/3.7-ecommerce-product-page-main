@@ -3,16 +3,39 @@ import cart from "../images/icon-cart - btn.svg"
 import plus from "../images/icon-plus.svg";
 import minus from "../images/icon-minus.svg";
 
-export default function Units() {
+export default function Units({ amount }) {
+  const addUnits = (e) => {
+    const $input = document.querySelector("input[name='number']");
+    
+    e.target.classList.contains("plus")
+      ? $input.value++
+      : $input.value > 0 && $input.value--
+
+  }
+
   return (
     <UnitsStyle action="" name="addCartForm">
       <div className="units">
-        <UnitsBtn background={plus} position={"left"} type="button" />
+        <UnitsBtn 
+          className="plus"
+          background={plus} 
+          position={"right"}
+          type="button" 
+          onClick={e => addUnits(e)}
+        />
 
         <input className="units__input" type="number" name="number" value="0" readOnly/>
         
-        <UnitsBtn background={minus} position={"right"} type="button" />
+        <UnitsBtn 
+          className="minus"
+          background={minus} 
+          position={"left"} 
+          type="button" 
+          onClick={e => addUnits(e)}
+        /> 
       </div>
+
+      <input className="units__amount" type="number" name="price" defaultValue={amount}/> 
 
       <button typeof="submit" className="units__add">
         <img src={cart} alt="cart" />
