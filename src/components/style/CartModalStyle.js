@@ -6,7 +6,7 @@ export const CartModalStyle = styled.div`
   display: ${
     props => props.mState ? "none" : "block"
   };
-  width: calc(100% - 16px);
+  width: min(calc(100% - 16px), 460px);
   background: ${styleVariables.bg};
   z-index: 1;
   right: 7px;
@@ -30,5 +30,11 @@ export const CartModalStyle = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  @media (min-width: 1024px) {
+    width: 360px;
+    right: -2vw;
+    top: 90px;
   }
 `

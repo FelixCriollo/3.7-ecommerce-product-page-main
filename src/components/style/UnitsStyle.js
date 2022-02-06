@@ -27,7 +27,6 @@ export const UnitsStyle = styled.form`
     &__add {
       width: 100%;
       background: ${styleVariables["primary"]};
-
       margin-top: 1em;
       display: flex;
       align-items: center;
@@ -36,6 +35,8 @@ export const UnitsStyle = styled.form`
       font-weight: 700;
       border-radius: 10px;
       padding: 1.1em 0;
+      cursor: pointer;
+      box-shadow: 0px 10px 40px -10px rgba(255, 125, 27, .8);
 
       img {
         width: 14px;
@@ -43,8 +44,25 @@ export const UnitsStyle = styled.form`
         margin-right: 14px;
       }
     }
-    &__amount {
-      display: none;
+  }
+
+  @media (min-width: 1024px) {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1.17fr 2fr;
+    grid-template-rows: 56px;
+    gap: 15px;
+
+    .units {
+      border-radius: 10px;
+
+      &__add {
+        margin: 0;
+        &:hover,
+        &:focus {
+          opacity: .8;
+        }
+      }
     }
   }
 `
@@ -54,5 +72,5 @@ export const UnitsBtn = styled.button`
   width: 60px;
   height: 100%;
   ${props => props.position === "left" ? "left: 0;" : "right: 0;"}
-
+  cursor: pointer;
 `

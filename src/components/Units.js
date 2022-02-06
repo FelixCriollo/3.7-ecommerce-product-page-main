@@ -35,8 +35,6 @@ export default function Units({ amount }) {
         /> 
       </div>
 
-      <input className="units__amount" type="number" name="price" defaultValue={amount}/> 
-
       <button typeof="submit" className="units__add">
         <img src={cart} alt="cart" />
         Add to cart

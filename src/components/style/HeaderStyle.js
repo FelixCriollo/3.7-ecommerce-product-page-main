@@ -24,6 +24,7 @@ export const HeaderStyle = styled.header`
   }
 
   @media (min-width: 1024px) { 
+    position: relative;
     padding: 1.815em 0;
     align-items: center;
     border-bottom: 1px solid ${styleVariables["text-price"]};

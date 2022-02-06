@@ -15,7 +15,7 @@ export default function Product() {
   return (
     <ProductStyle>
       <div className="main-image"> 
-        <MoveBtn 
+        <MoveBtn  
           background={previous} 
           position={"left"} 
           type="button" 
@@ -40,7 +40,18 @@ export default function Product() {
       </div>
 
       <div className="thumbnail"> 
-
+        <img className="thumbnail__img" 
+          src={require("../images/image-product-1-thumbnail.jpg")} alt=""
+        />
+        <img className="thumbnail__img" 
+          src={require("../images/image-product-2-thumbnail.jpg")} alt=""
+        />
+        <img className="thumbnail__img" 
+          src={require("../images/image-product-3-thumbnail.jpg")} alt=""
+        />
+        <img className="thumbnail__img" 
+          src={require("../images/image-product-4-thumbnail.jpg")} alt=""
+        />
       </div>
     </ProductStyle>
   )
